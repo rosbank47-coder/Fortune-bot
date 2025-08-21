@@ -1,0 +1,48 @@
+[app]
+
+# Название APK (будет видно на телефоне)
+title = My Love Game
+package.name = mylovegame
+package.domain = org.example
+
+# Версия
+version = 1.0
+
+# Главный файл приложения
+source.dir = .
+source.include_exts = py, mp3, png, jpg, kv
+
+# entrypoint — наш main.py
+main.py = main.py
+
+# Иконка (можешь потом добавить PNG и заменить путь)
+icon.filename = icon.png
+
+# Ориентация
+orientation = portrait
+
+# Разрешения (например, на доступ к хранилищу, если музыка будет в mp3)
+android.permissions = WRITE_EXTERNAL_STORAGE, READ_EXTERNAL_STORAGE
+
+# Минимальная и целевая версия Android
+android.minapi = 21
+android.api = 31
+android.ndk = 23b
+
+# Модули, которые подтягиваем
+requirements = python3, kivy
+
+# Формат сборки
+package.format = apk
+
+
+[buildozer]
+
+# Log Level (можно debug для отладки)
+log_level = 2
+
+# Где собирать (auto = пусть выберет сам)
+build_dir = .buildozer
+
+# Разрешить пересобирать проект
+force_build = 0
